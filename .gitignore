@@ -13,6 +13,19 @@ target/
 .springBeans
 .sts4-cache
 
+/.metadata/
+.metadata
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+.target
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
@@ -31,3 +44,8 @@ build/
 
 ### VS Code ###
 .vscode/
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+mvnw
+
+mvnw.cmd
