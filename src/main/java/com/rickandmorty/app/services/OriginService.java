@@ -4,8 +4,6 @@ import org.springframework.stereotype.Service;
 
 import org.springframework.web.reactive.function.client.WebClient;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
 import com.rickandmorty.app.models.Origin;
 
@@ -21,8 +19,7 @@ public class OriginService {
 		webClient = builder.baseUrl(RICKANDMORTY_URL).build();
 	}
 	
-	@JsonProperty(access = Access.WRITE_ONLY)
-	public Origin getLocation(String name) {
+	public Origin getOrigin(String name) {
 		Origin response= webClient
 				.get()
 				.uri(uriBuilder -> uriBuilder
