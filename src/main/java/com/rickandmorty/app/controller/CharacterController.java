@@ -19,7 +19,7 @@ import com.rickandmorty.app.models.Character;
 import com.rickandmorty.app.models.Origin;
 
 @Controller
-public class CharacterContrller {
+public class CharacterController {
 	
 	@Autowired
 	private CharacterService characterService;
@@ -42,7 +42,7 @@ public class CharacterContrller {
 		}
 		
 		try {
-			origin = originService.getLocation(character.getOrigin().getName());
+			origin = originService.getOrigin(character.getOrigin().getName());
 		}catch(Exception e) {
 			response.put("error", "No se encontro el origen del personaje");
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.NOT_FOUND);
